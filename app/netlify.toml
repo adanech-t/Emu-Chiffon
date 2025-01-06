@@ -1,4 +1,4 @@
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
+[build]
+  base = "app"  # Build from the "app" folder
+  command = "npm run build"  # Command to build your app
+  publish = "app/build"  # Folder where the build output should be published
