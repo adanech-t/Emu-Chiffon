@@ -1,7 +1,7 @@
 [build]
-  base = "app"  # Build from the "app" folder
+  base = "/app"  # Build from the "app" folder
   command = "npm run build"  # Command to build your app
-  publish = "/app/app/build"   # Absolute path in case it's not resolving correctly
+  publish = "/app/build"   # Absolute path in case it's not resolving correctly
 
 
 [[redirects]]
