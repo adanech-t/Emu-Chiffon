@@ -1,5 +1,4 @@
 import React from "react";
-import bg from "../util/photo_2025-01-01_01-20-14-removebg-preview.png";
 
 function AboutUs() {
   return (

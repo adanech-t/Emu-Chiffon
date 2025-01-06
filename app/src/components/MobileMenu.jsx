@@ -5,6 +5,7 @@ import { Link as ScrollLink } from "react-scroll";
 
 export default function MobileMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  console.log(isMenuOpen);
   const { isUser } = useAuthContext();
   return (
     <div className="md:hidden bg-gray-800 text-white p-4 space-y-4">
