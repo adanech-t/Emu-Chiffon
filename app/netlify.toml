@@ -1,3 +1,8 @@
 [build]
   base = "app"  # Build from the "app" folder
   command = "npm run build"  # Command to build your app
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
