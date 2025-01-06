@@ -1,6 +1,8 @@
 [build]
-    command = "npm run build"
-    publish = "build"
+  base = "app"  # Build from the "app" folder
+  command = "npm run build"  # Command to build your app
+  publish = "app/build"  # Folder where the build output should be published
 
-[context.production]
-    branch = "main"
+[context.production.environment]
+  # Add any environment variables required by your app here
+  # For example: REACT_APP_API_URL = "your-api-url"
