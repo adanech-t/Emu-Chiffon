@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -34,5 +34,24 @@
   }
   to {
     transform: rotate(360deg);
+  }
+} */
+
+@media screen (max-width: 1024px) {
+  .scale-layout {
+    transform: scale(0.8); /* Scale down for smaller screens */
+    transform-origin: top center; /* Maintain alignment */
+  }
+}
+
+@media screen (max-width: 768px) {
+  .scale-layout {
+    transform: scale(0.7); /* Further scaling for very small devices */
+  }
+}
+
+@media screen (max-width: 480px) {
+  .scale-layout {
+    transform: scale(0.6); /* Maximize visibility on very small devices */
   }
 }

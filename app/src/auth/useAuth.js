@@ -9,9 +9,9 @@ import { auth } from "../firebase";
 
 export function useAuth() {
   const navigate = useNavigate();
-  const [isUser, setIsUser] = useState(false); // Tracks if the user is logged in
-  const [error, setError] = useState(""); // Tracks error messages
-  const [loading, setLoading] = useState(true); // Tracks the initial loading state
+  const [isUser, setIsUser] = useState(false);
+  const [error, setError] = useState(""); 
+  const [loading, setLoading] = useState(true);
 
   /**
    * Handles user login with email and password
@@ -23,39 +23,31 @@ export function useAuth() {
       await signInWithEmailAndPassword(auth, email, password);
       setIsUser(true);
       setError("");
-      navigate("/"); // Redirect to the home page
+      navigate("/");
     } catch (err) {
       setError(err.message || "An error occurred during login.");
     }
   };
 
-  /**
-   * Handles user logout
-   */
   const logout = async () => {
     try {
       await signOut(auth);
       setIsUser(false);
-      navigate("/auth"); // Redirect to the login page
+      navigate("/auth");
     } catch (err) {
       setError(err.message || "An error occurred during logout.");
     }
   };
 
-  /**
-   * Monitor the user's authentication state on mount
-   */
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        setIsUser(true); // User is logged in
+        setIsUser(true);
       } else {
-        setIsUser(false); // User is not logged in
+        setIsUser(false);
       }
-      setLoading(false); // Authentication state has been checked
+      setLoading(false);
     });
-
-    // Cleanup subscription on component unmount
     return () => unsubscribe();
   }, []);
 

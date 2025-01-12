@@ -38,3 +38,10 @@ html {
   background: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
+
+/* Hide the scrollbar but keep it functional on mobile */
+@media (max-width: 768px) {
+  *::-webkit-scrollbar {
+    display: none;
+  }
+}
