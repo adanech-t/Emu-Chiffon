@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useItemsContext } from "../context/ItemsContextProvider";
 
 const AdminDashboard = () => {
-  const list = useItemsContext()
+  const list = useItemsContext();
   const [items, setItems] = useState([...list]);
   const [itemName, setItemName] = useState("");
   const [itemPrice, setItemPrice] = useState("");
@@ -48,7 +48,7 @@ const AdminDashboard = () => {
   );
 
   return (
-    <div className="max-h-screen bg-gray-100 pt-6 flex justify-center gap-6 px-6 overflow-hidden">
+    <div className="md:max-h-screen bg-gray-100 pt-6 flex justify-center flex-col md:flex-row gap-6 px-6 overflow-hidden">
       {/* Add Item Form */}
       <div className="w-fit h-screen py-16">
         <div className="w-full max-w-md bg-white rounded-lg shadow-md p-6 h-fit">
@@ -98,11 +98,23 @@ const AdminDashboard = () => {
             </button>
           </form>
         </div>
+        <div className="mt-6 bg-white rounded-lg shadow-md p-6">
+          <h2 className="text-xl font-semibold mb-4">Inventory Summary</h2>
+          <p className="text-gray-700">
+            <span className="font-semibold">Total Items:</span> {items.length}
+          </p>
+          <p className="text-gray-700">
+            <span className="font-semibold">Total Value:</span> $
+            {items
+              .reduce((total, item) => total + (parseInt(item.price) || 0), 0)
+              .toFixed(2)}
+          </p>
+        </div>
       </div>
 
       {/* Items List */}
-      <div className="py-16 flex-1 h-screen">
-        <h2 className="text-2xl font-bold pb-4">Items List</h2>
+      <div className="pt-16 h-screen flex md:flex-1 flex-col">
+        <h2 className="text-2xl font-bold pb-4 sticky">Items List</h2>
 
         {/* Search Bar */}
         <div className="mb-6">
@@ -115,12 +127,12 @@ const AdminDashboard = () => {
           />
         </div>
 
-        <div className="h-[85%] overflow-y-scroll overflow-x-hidden pb-6 item-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="h-[85%] overflow-y-scroll overflow-x-hidden pb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {filteredItems.map((item) => (
               <div
                 key={item.id}
-                className="bg-white rounded-lg shadow-md overflow-hidden relative flex flex-col w-fit"
+                className="bg-white rounded-lg shadow-md overflow-hidden relative flex flex-col w-full"
               >
                 {/* Ellipsis Menu */}
                 <div className="absolute top-2 right-2 z-10">
@@ -161,7 +173,7 @@ const AdminDashboard = () => {
                 </div>
 
                 {/* Image */}
-                <div className="h-86 w-58 relative">
+                <div className="h-48 w-full relative">
                   <img
                     src={item.img}
                     alt={item.name}
@@ -174,9 +186,7 @@ const AdminDashboard = () => {
                   <h3 className="text-lg font-semibold mb-2 text-gray-800">
                     {item.name}
                   </h3>
-                  <p className="text-gray-600 text-sm">
-                    ${item.price}
-                  </p>
+                  <p className="text-gray-600 text-sm">${item.price}</p>
                 </div>
               </div>
             ))}
