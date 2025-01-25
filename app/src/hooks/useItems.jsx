@@ -5,18 +5,18 @@ import chiffon4 from "../util/four.jpg";
 
 export default function useItems() {
   const items = [
-    { img: hoodie, name: "1", price: "1" },
-    { img: chiffon2, name: "Chiffon Dress", price: "45.00" },
-    { img: chiffon3, name: "Summer Top", price: "35.00" },
-    { img: chiffon4, name: "4", price: "65.00" },
-    { img: chiffon2, name: "Chiffon Dress", price: "45.00" },
-    { img: chiffon3, name: "Summer Top", price: "6" },
-    { img: chiffon4, name: "Casual Jacket", price: "65.00" },
-    { img: chiffon3, name: "8", price: "35.00" },
-    { img: chiffon4, name: "Casual Jacket", price: "65.00" },
-    { img: chiffon2, name: "Chiffon Dress", price: "45.00" },
-    { img: chiffon3, name: "Summer Top", price: "35.00" },
-    { img: chiffon4, name: "12", price: "65.00" },
+    { img: hoodie, name: "Chiffon Dress", price: "10,000" },
+    { img: chiffon2, name: "Chiffon Dress", price: "10,000" },
+    { img: chiffon3, name: "Chiffon Dress", price: "10,000" },
+    { img: chiffon4, name: "Chiffon Dress", price: "10,000" },
+    { img: chiffon2, name: "Chiffon Dress", price: "10,000" },
+    { img: chiffon3, name: "Chiffon Dress", price: "10,000" },
+    { img: chiffon4, name: "Chiffon Dress", price: "10,000" },
+    { img: chiffon3, name: "Chiffon Dress", price: "10,000" },
+    { img: chiffon4, name: "Casual Jacket", price: "10,000" },
+    { img: chiffon2, name: "Chiffon Dress", price: "10,000" },
+    { img: chiffon3, name: "Chiffon Dress", price: "10,000" },
+    { img: chiffon4, name: "Chiffon Dress", price: "10,000" },
   ];
   return items;
 }
