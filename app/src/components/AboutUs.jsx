@@ -16,13 +16,6 @@ function AboutUs() {
             for everyone. Our goal is to offer affordable, stylish clothing that
             fits your lifestyle.
           </p>
-          <p className="text-lg mb-6 text-gray-600 max-w-lg mx-auto md:mx-0 text-justify">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
-            nesciunt non quo veritatis dolore, sapiente, cupiditate asperiores
-            ea ut quisquam iusto eaque adipisci quia laboriosam sint dolorum
-            voluptatem nemo cum.
-          </p>
-          
           <div className="flex items-center space-x-6 text-gray-700 text-sm md:text-base md:flex pb-6">
             <div className="flex items-center space-x-2">
               <i className="fab fa-telegram-plane text-pink-500"></i>
