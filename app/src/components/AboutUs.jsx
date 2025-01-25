@@ -20,12 +20,12 @@ function AboutUs() {
             <div className="flex items-center space-x-2">
               <i className="fab fa-telegram-plane text-pink-500"></i>
               <a
-                href="https://t.me/YourUsername"
+                href="https://t.me/EmuDiamond21"
                 className="hover:text-pink-500 transition"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                @YourUsername
+                @EmuDiamond21
               </a>
             </div>
             <div className="flex items-center space-x-2">
