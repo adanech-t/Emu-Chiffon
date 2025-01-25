@@ -100,7 +100,7 @@ export default function Shop() {
               <p className="text-sm sm:text-base text-white">
                 {item.description}
               </p>
-              <p className="text-xl font-bold text-white">${item.price}</p>
+              <p className="text-xl font-bold text-white">{item.price} birr</p>
               <div className="flex justify-between items-center">
                 <button
                   onClick={() => openModal(item)}
